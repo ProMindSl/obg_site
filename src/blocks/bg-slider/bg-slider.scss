@@ -9,11 +9,13 @@
   z-index: -3;
 
   list-style: none;
-      padding-inline-start: 0px;
+  padding-inline-start: 0px;
 
   &__img
   {
     position: absolute;
     width: 100%;
+    height: auto;
+    opacity: 0;
   }
 }
