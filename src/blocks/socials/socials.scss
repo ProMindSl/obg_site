@@ -8,22 +8,36 @@
     height: 50px;
     width: 50px;
     background-position: center; 
+    @include transitionM(background-color, 0.3s);
 
-    &--fb 
+    &--phone 
     {
-    	background: $primary url("../img/fb_pic.svg") no-repeat;
+    	background: $primary url("../img/pic_headphone.svg") no-repeat;
     	background-position: center;
     }
     
-    &--tw 
+    &--up 
     {
-    	background: $primary url("../img/tw_pic.svg") no-repeat;
+    	background: $primary url("../img/pic_up.svg") no-repeat;
     	background-position: center;
     }
 
     &:hover
     {
-    	background-color: #ea555d;
+        cursor: pointer;
+    	background-color: $light_primary;
+        @include transitionM(background-color, 0.3s);
+    }
+  }
+
+  span.phoneVal
+  {
+    font-size: 20px;
+    color: $primary; 
+
+    &:hover
+    {
+        text-decoration: underline;
     }
   }
 }

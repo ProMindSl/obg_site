@@ -1,8 +1,8 @@
-mixin bg-slider(modifier)
+mixin bg-slider(imgNames, modifier)
   ul.bg-slider&attributes(attributes)
-    li.bg-slider__img(id="bg_id_1" style="background-image: url(img/bg_img_10.jpg);  opacity: 1;")
-    li.bg-slider__img(id="bg_id_2" style="background-image: url(img/bg_img_1.JPG);")
-    li.bg-slider__img(id="bg_id_3" style="background-image: url(img/bg_img_2.JPG);")
-    li.bg-slider__img(id="bg_id_4" style="background-image: url(img/bg_img_3.JPG);")
-    li.bg-slider__img(id="bg_id_5" style="background-image: url(img/bg_img_4.JPG);")
-    li.bg-slider__img(id="bg_id_6" style="background-image: url(img/bg_img_5.JPG);")
+  - for(let i_img=0; i_img<imgNames.length; i_img++) {
+  -   if (i_img == 0) {
+    li.bg-slider__img(id="bg_id_1" style="background-image: url("+imgNames[0]+");  opacity: 1;")
+  -   }	
+    li.bg-slider__img(id="bg_id_"+String(i_img+1) style="background-image: url("+imgNames[i_img]+");")
+  - }    

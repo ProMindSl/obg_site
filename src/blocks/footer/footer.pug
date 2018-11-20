@@ -3,11 +3,10 @@ mixin footer(modifier)
     .container-fluid
       .row
         .col-12
-          .footer__top
+          .footer__top.mx-auto
             nav.footer__sitemap
-              a.footer__link(href="#") Главная
-              a.footer__link(href="#") Новости
-              a.footer__link(href="#") Услуги
-              a.footer__link(href="#") Контакты
+              a.footer__link(href="#" data-target="#modal_SiteMap" data-toggle="modal") Карта сайта
+              a.footer__link(href="#" data-target="#modal_AboutSite" data-toggle="modal") Сайт-инфо
+              a.footer__link(href="#" data-target="#modal_AboutCo" data-toggle="modal") О Компании
             +socials(class="mt-20 mr-5")
-          span.footer__copyright  © 2018 re-mote, all rights reserved
+          span.footer__copyright.mx-auto  © 2018 ООО "Стирус" Строительная компания

@@ -49,12 +49,17 @@ $headings-margin-bottom: $spacer;
 
 /* Project variables */
 
-$primary: #E73741;
+$primary: #07294d;
+$primary_yellow: #ffc600;
+$dark_primary_yellow: #e5ae1f;
 $dark: #1a1a1a;
 $black: #000000;
+$dark_primary: #223948;
+$light_primary: #243a74;
+$gray: #999;
 
 $container-max-widths: (
-  xl: 1366px 
+  xl: 1220px 
 );
 
 $font-family-sans-serif: 'Fira Sans', 'Arial', sans-serif;
@@ -71,29 +76,29 @@ $font-family-sans-serif: 'Fira Sans', 'Arial', sans-serif;
 @import "../../node_modules/bootstrap/scss/images";
 //@import "../../node_modules/bootstrap/scss/code";
 @import "../../node_modules/bootstrap/scss/grid";
-//@import "../../node_modules/bootstrap/scss/tables";
+@import "../../node_modules/bootstrap/scss/tables";
 //@import "../../node_modules/bootstrap/scss/forms";
-//@import "../../node_modules/bootstrap/scss/buttons";
-//@import "../../node_modules/bootstrap/scss/transitions";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/transitions";
 //@import "../../node_modules/bootstrap/scss/dropdown";
 //@import "../../node_modules/bootstrap/scss/button-group";
-//@import "../../node_modules/bootstrap/scss/input-group";
-//@import "../../node_modules/bootstrap/scss/custom-forms";
-//@import "../../node_modules/bootstrap/scss/nav";
-//@import "../../node_modules/bootstrap/scss/navbar";
-//@import "../../node_modules/bootstrap/scss/card";
+@import "../../node_modules/bootstrap/scss/input-group";
+@import "../../node_modules/bootstrap/scss/custom-forms";
+@import "../../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/navbar";
+@import "../../node_modules/bootstrap/scss/card";
 //@import "../../node_modules/bootstrap/scss/breadcrumb";
 //@import "../../node_modules/bootstrap/scss/pagination";
 //@import "../../node_modules/bootstrap/scss/badge";
 //@import "../../node_modules/bootstrap/scss/jumbotron";
 //@import "../../node_modules/bootstrap/scss/alert";
-//@import "../../node_modules/bootstrap/scss/progress";
+@import "../../node_modules/bootstrap/scss/progress";
 //@import "../../node_modules/bootstrap/scss/media";
 //@import "../../node_modules/bootstrap/scss/list-group";
-//@import "../../node_modules/bootstrap/scss/close";
-//@import "../../node_modules/bootstrap/scss/modal";
+@import "../../node_modules/bootstrap/scss/close";
+@import "../../node_modules/bootstrap/scss/modal";
 //@import "../../node_modules/bootstrap/scss/tooltip";
 //@import "../../node_modules/bootstrap/scss/popover";
-//@import "../../node_modules/bootstrap/scss/carousel";
+@import "../../node_modules/bootstrap/scss/carousel";
 @import "../../node_modules/bootstrap/scss/utilities";
-@import "../../node_modules/bootstrap/scss/print";
+//@import "../../node_modules/bootstrap/scss/print";
