@@ -1,6 +1,6 @@
 .bg-slider 
 {
-  background-color: green;
+  background-color: #000;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -15,7 +15,9 @@
   {
     position: absolute;
     width: 100%;
-    height: auto;
+    height: 100%;
     opacity: 0;
+    background-size:cover;
+    background-repeat:none;
   }
 }
