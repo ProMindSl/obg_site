@@ -3,6 +3,7 @@ mixin header(modifier)
     .container-fluid
       .row
         .col-12
-          .header__content
-            +logo(class="ml-15")
-            a.btn(href="#").mr-15 Кнопка
+          .header__content.mx-auto
+          	nav.header__up-menu
+            +logo(class="mt-15")
+            nav.header__menu
