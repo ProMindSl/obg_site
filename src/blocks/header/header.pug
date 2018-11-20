@@ -4,6 +4,13 @@ mixin header(modifier)
       .row
         .col-12
           .header__content.mx-auto
-          	nav.header__up-menu
-            +logo(class="mt-15")
+            nav.header__up-menu.clearfix
+              ul
+                li.up-m-btn
+                  a Пресс-служба
+                li.up-m-btn
+                  a O нас
+                li.up-m-btn
+                  a Будь первым!
+            +logo
             nav.header__menu
