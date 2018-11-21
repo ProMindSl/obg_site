@@ -6,7 +6,7 @@ var currBgSlide = 1;
 // CURRENT CODE
 document.addEventListener('keydown', (event) => {
   const keyNum = event.keyCode;
-  if (keyNum === 32)
+  if (keyNum === 39)
   {
 	changeBgSlide();
   }
