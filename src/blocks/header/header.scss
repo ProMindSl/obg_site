@@ -125,6 +125,25 @@
     background: $primary;
 
     margin-bottom: 9px;
+    vertical-align: bottom;
+
+    ul
+    {
+      display: inline-block;
+      vertical-align: middle;
+      li
+      {
+        display: inline;
+        vertical-align: middle;
+      }
+    }
+
+    &__btn
+    {
+      vertical-align: middle;
+      font-size: 18px;
+      color: #fff;
+    }
   }
 
   
