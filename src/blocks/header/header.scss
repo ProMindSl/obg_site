@@ -109,6 +109,7 @@
             
       &:hover
       {
+        cursor: pointer;
         background: $dark_primary_yellow;
         @include transitionM(background-color, 0.3s);
                  
@@ -129,20 +130,44 @@
 
     ul
     {
-      display: inline-block;
-      vertical-align: middle;
+      display: block;
+      margin-bottom: 0px;
+      height: 100%;
+      padding-inline-start: 0px;
+      
       li
       {
         display: inline;
-        vertical-align: middle;
+        text-align: center;
+
+       &:before 
+       {
+         content: "";
+         display: inline-block;
+         height: 100%;
+         vertical-align: middle;
+       }
       }
     }
 
     &__btn
     {
-      vertical-align: middle;
-      font-size: 18px;
+      display: inline-block;
+      min-width: 150px;
+
+      font-family: 'Futura Condensed';
+      font-size: 20px;
       color: #fff;
+      margin-left: 40px;
+      vertical-align: middle;
+
+      @include transitionM(color, 0.3s);
+
+      &:hover
+      {
+        color: $primary_yellow;
+        @include transitionM(color, 0.3s);
+      }
     }
   }
 
