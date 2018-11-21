@@ -118,8 +118,15 @@
 
   }
 
+  a.logo
+  {
+    z-index: 3;
+    box-shadow: 0 0 10px rgba(7, 40, 77, 0.5);
+  }
+
   &__menu
   {
+    z-index: 2;
     display: inline-block;
     width: 1050px;
     height: 56px;
@@ -127,6 +134,8 @@
 
     margin-bottom: 9px;
     vertical-align: bottom;
+
+    box-shadow: 0 0 7px rgba(7, 40, 77, 0.5);
 
     ul
     {
@@ -156,7 +165,7 @@
       min-width: 150px;
 
       font-family: 'Futura Condensed';
-      font-size: 20px;
+      font-size: 17px;
       color: #fff;
       margin-left: 40px;
       vertical-align: middle;
