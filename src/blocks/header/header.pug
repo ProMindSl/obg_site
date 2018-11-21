@@ -4,13 +4,18 @@ mixin header(modifier)
       .row
         .col-12
           .header__content.mx-auto
-            nav.header__up-menu.clearfix
-              ul
+            nav.header__up-menu
+              ul.mr-15
                 li.up-m-btn
                   a Пресс-служба
                 li.up-m-btn
                   a O нас
                 li.up-m-btn
                   a Будь первым!
+              form.header__signin-form
+                input.up-menu-input(type="text" placeholder="Логин")
+                input.up-menu-input(type="password" placeholder="Пароль")
+                input.btn_si.ml-3(type="submit", value="Войти")
+                input.btn_si.ml-1(type="submit", value="Регистрация")
             +logo
             nav.header__menu

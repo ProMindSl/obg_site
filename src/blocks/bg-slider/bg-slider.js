@@ -18,12 +18,12 @@ document.addEventListener('keydown', (event) => {
 function changeBgSlide()
 {
 	// убираем предыдущий слайд
-	TweenMax.to($('#bg_id_'+String(currBgSlide)), 0.5, {opacity:0});
+	TweenMax.to($('#bg_id_'+String(currBgSlide)), 1, {opacity:0});
 
 	// контроль выхода за предел кол-ва слайдеров
 	currBgSlide++;
 	if (currBgSlide > BG_SL_QTY) currBgSlide = 1;
 
 	// показываем новый слайд
-	TweenMax.to($('#bg_id_'+String(currBgSlide)), 0.5, {opacity:1});
+	TweenMax.to($('#bg_id_'+String(currBgSlide)), 1, {opacity:1});
 }

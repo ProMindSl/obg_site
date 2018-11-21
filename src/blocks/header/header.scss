@@ -4,12 +4,11 @@
   
   &__content 
   {
-    //display: flex;
-    
     // for inline-block childs
     font-size: 0;
 
-    background: rgba(255, 255,255,0.5);
+
+    //background: rgba(255, 255,255,0.5);
     min-height: 150px;
     max-width: 1220px;
    
@@ -25,16 +24,18 @@
     display: block;
     width: 100%;
     height: 33px;
-    background: red;
 
+    // for inline-block inside
+    text-align: right;
 
     ul
     {
+      display: inline-block;
       padding-inline-start: 0;
       font-size: 0;
+      
+      vertical-align: top;
 
-
-      //float: right;
       .up-m-btn
       {
         
@@ -54,20 +55,66 @@
           border-right: 1px solid #4670db;
         }
 
-
         a 
         {
           font-size: 11px;
           vertical-align: middle;
-
+          @include transitionM(color, 0.3s);
+          
           &:hover
           {
             cursor: pointer;
             color: $primary_yellow;
+            @include transitionM(color, 0.3s);
           }
         }
       }
     }
+  }
+
+  &__signin-form
+  {
+    display: inline-block;
+    height: 33px;
+    
+    //for i-b
+    font-size: 0px;
+
+    .up-menu-input
+    {
+      display: inline-block;
+      //display: none;
+      height: 25px;
+      width: 80px;
+      font-size: 11px;
+      color: $gray;
+      padding-left: 3px;
+      
+      vertical-align: middle;
+
+      @include placeholder($gray, $font-family-sans-serif, 11px, 300);
+    }
+
+    .btn_si
+    {
+      display: inline-block;
+      height: 33px;
+      min-width: 60px;
+      font-size: 11px;
+      background: $primary_yellow;
+      color: $primary;
+      vertical-align: middle;
+
+      @include transitionM(background-color, 0.3s)
+            
+      &:hover
+      {
+        background: $dark_primary_yellow;
+        @include transitionM(background-color, 0.3s);
+                 
+      }
+    }
+
   }
 
   &__menu
@@ -80,11 +127,5 @@
     margin-bottom: 9px;
   }
 
-  .clearfix::after 
-  {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
+  
 }
