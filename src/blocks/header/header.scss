@@ -6,19 +6,33 @@
   {
     // for inline-block childs
     font-size: 0;
-
+    //text-align: center;
 
     //background: rgba(255, 255,255,0.5);
     min-height: 150px;
     max-width: 1220px;
-   
+    
     /* Пример медиа-запроса. Подробнее здесь: https://getbootstrap.com/docs/4.1/layout/overview/#responsive-breakpoints */
     @include media-breakpoint-down(md) 
     {
       //padding: 10px 0;
     }
 
-    //@media all and 
+    @media all and (max-width:1270px)
+    {
+      max-width: 980px;
+    }
+    @media all and (max-width:1050px)
+    {
+      text-align: center;
+      max-width: 720px;
+    }
+    @media all and (max-width:780px)
+    {
+      text-align: center;
+      max-width: 720px;
+    }
+
   }
   
   &__up-menu
@@ -114,7 +128,7 @@
         cursor: pointer;
         background: $dark_primary_yellow;
         @include transitionM(background-color, 0.3s);
-                 
+              
       }
     }
 
@@ -122,22 +136,52 @@
 
   a.logo
   {
-    z-index: 3;
+    display: inline-block;
+    z-index: 100;
     box-shadow: 0 0 10px rgba(7, 40, 77, 0.5);
+
+    @media all and (max-width:780px)
+    {
+      display: block;
+      margin: 0 auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
   }
 
   &__menu
   {
-    z-index: 2;
+    z-index: 1;
     display: inline-block;
     width: 1050px;
-    height: 56px;
-    background: $primary;
+    min-height: 56px;
+    
+    @media all and (max-width:1270px)
+    {
+      width: 810px;
+    }
+    @media all and (max-width:1050px)
+    {
+      width: 550px;
+    }
+    @media all and (max-width:780px)
+    {
+      //display: block;
+    }
+    @media all and (max-width:600px)
+    {
+        display: block;
+        margin: 0 auto;
+        width: 170px;
+    }
 
+    background: $primary;
+    
     margin-bottom: 9px;
     vertical-align: bottom;
 
-    box-shadow: 0 0 7px rgba(7, 40, 77, 0.5);
+    //box-shadow: 2px 0 7px rgba(7, 40, 77, 0.5);
+    box-shadow: 3px 0 7px rgb(0,0,0);
 
     ul
     {
@@ -171,6 +215,7 @@
       font-size: 17px;
       color: #fff;
       margin-left: 40px;
+      margin-right: 0px;
       vertical-align: middle;
 
       @include transitionM(color, 0.3s);
@@ -180,6 +225,23 @@
         color: $primary_yellow;
         @include transitionM(color, 0.3s);
       }
+
+      @media all and (max-width: 1270px)
+      {
+        min-width: 100px;
+      }
+      @media all and (max-width:1050px)
+      {
+        min-width: 50px;
+        margin-left: 15px;
+        margin-right: 15px;
+        
+      }
+      @media all and (max-width:600px)
+      {
+        display: block;
+      }
+    
     }
   }
 
