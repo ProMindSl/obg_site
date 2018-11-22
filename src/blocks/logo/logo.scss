@@ -3,7 +3,9 @@
 	display: inline-block;
 	width: 170px;
    	height: 119px;
-   	background: rgba(255,255,255, 0) url("../img/logo_main.svg") no-repeat;
-   	//background-image:  url("../img/logo_bg.png"), url("../img/logo_main.svg");
-   	//background-repeat: no-repeat, no-repeat;
+   	//background: rgba(255,255,255, 0) url("../img/logo_main.svg") no-repeat;
+   	
+   	background-image:  url("../img/logo_main.svg"), url("../img/logo_bg.png");
+   	background-repeat: no-repeat, no-repeat;
+   	
 }
