@@ -4,19 +4,19 @@ mixin header(modifier)
       .row
         .col-12
           .header__content.mx-auto
-            nav.header__up-menu
-              ul.mr-15
-                li.up-m-btn
+            nav.header__up-bar
+              ul.header__up-bar__up-menu.mr-15
+                li.header__up-bar__up-menu__btn
                   a Пресс-служба
-                li.up-m-btn
+                li.header__up-bar__up-menu__btn
                   a O нас
-                li.up-m-btn
+                li.header__up-bar__up-menu__btn
                   a Будь первым!
-              form.header__signin-form
-                input.up-menu-input(type="text" placeholder="Логин")
-                input.up-menu-input(type="password" placeholder="Пароль")
-                input.btn_si.ml-3(type="submit", value="Войти")
-                input.btn_si.ml-1(type="submit", value="Регистрация")
+              form.header__up-bar__signin-form
+                input.header__up-bar__signin-form__input(type="text" placeholder="Логин")
+                input.header__up-bar__signin-form__input(type="password" placeholder="Пароль")
+                input.header__up-bar__signin-form__btn.ml-3(type="submit", value="Войти")
+                input.header__up-bar__signin-form__btn.ml-1(type="submit", value="Регистрация")
             +logo
             .header__btn-mini-menu(id="id_head-min-menu") ГЛАВНОЕ МЕНЮ
             nav.header__menu

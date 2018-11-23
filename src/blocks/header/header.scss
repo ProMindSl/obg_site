@@ -35,7 +35,7 @@
 
   }
   
-  &__up-menu
+  &__up-bar
   {
     display: block;
     width: 100%;
@@ -44,7 +44,7 @@
     // for inline-block inside
     text-align: right;
 
-    ul
+    &__up-menu
     {
       display: inline-block;
       padding-inline-start: 0;
@@ -52,7 +52,7 @@
       
       vertical-align: top;
 
-      .up-m-btn
+      &__btn
       {
         
         min-width: 80px;
@@ -84,55 +84,58 @@
             @include transitionM(color, 0.3s);
           }
         }
+
       }
     }
-  }
 
-  &__signin-form
-  {
-    display: inline-block;
-    height: 33px;
-    
-    //for i-b
-    font-size: 0px;
 
-    .up-menu-input
-    {
-      display: inline-block;
-      //display: none;
-      height: 25px;
-      width: 80px;
-      font-size: 11px;
-      color: $gray;
-      padding-left: 3px;
-      
-      vertical-align: middle;
-
-      @include placeholder($gray, $font-family-sans-serif, 11px, 300);
-    }
-
-    .btn_si
+    &__signin-form
     {
       display: inline-block;
       height: 33px;
-      min-width: 60px;
-      font-size: 11px;
-      background: $primary_yellow;
-      color: $primary;
-      vertical-align: middle;
+      
+      //for i-b
+      font-size: 0px;
 
-      @include transitionM(background-color, 0.3s)
-            
-      &:hover
+      &__input
       {
-        cursor: pointer;
-        background: $dark_primary_yellow;
+        display: inline-block;
+        //display: none;
+        height: 25px;
+        width: 80px;
+        font-size: 11px;
+        color: $gray;
+        padding-left: 3px;
+        
+        vertical-align: middle;
+
+        @include placeholder($gray, $font-family-sans-serif, 11px, 300);
+      }
+
+      &__btn
+      {
+        display: inline-block;
+        height: 33px;
+        min-width: 60px;
+        font-size: 11px;
+        background: $primary_yellow;
+        color: $primary;
+        vertical-align: middle;
+
         @include transitionM(background-color, 0.3s);
               
+        &:hover
+        {
+          cursor: pointer;
+          background: $dark_primary_yellow;
+          @include transitionM(background-color, 0.3s);
+                
+        }
       }
     }
-
   }
+
+  
 
   a.logo
   {
