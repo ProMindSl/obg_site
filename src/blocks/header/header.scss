@@ -58,7 +58,7 @@
         min-width: 80px;
         height: 33px;
         display: inline-block;
-        color: white;
+        //color: #fff;
         background: $primary;
         text-align: center;
         padding-left: 10px;
@@ -71,20 +71,17 @@
           border-right: 1px solid #4670db;
         }
 
-        a 
-        {
-          font-size: 11px;
-          vertical-align: middle;
-          @include transitionM(color, 0.3s);
+        font-size: 11px;
+        vertical-align: middle;
+        color: #fff;
+        @include transitionM(color, 0.3s);
           
-          &:hover
-          {
-            cursor: pointer;
-            color: $primary_yellow;
-            @include transitionM(color, 0.3s);
-          }
+        &:hover
+        {
+          cursor: pointer;
+          color: $primary_yellow;
+          @include transitionM(color, 0.3s);
         }
-
       }
     }
 
