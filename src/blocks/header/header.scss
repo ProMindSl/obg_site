@@ -149,55 +149,86 @@
     }
   }
 
+  &__btn-mini-menu
+  {
+    display: none;
+
+    @media all and (max-width:600px)
+    {
+      display: block;
+      margin: 0 auto;
+      width: 170px;
+      height: 40px;   
+
+      background: $primary;
+      color: #fff;
+      font-family: 'Futura Condensed';
+      font-weight: bold;
+      font-size: 17px;
+      padding-top: 9px;   
+
+      box-shadow: 0 0 7px rgb(0,0,0);
+
+      &:hover
+      {
+        cursor: pointer;
+        color: $primary_yellow;
+      }
+    }
+  }
+
   &__menu
   {
     z-index: 1;
     display: inline-block;
     width: 1050px;
     min-height: 56px;
-    
-    @media all and (max-width:1270px)
-    {
-      width: 810px;
-    }
-    @media all and (max-width:1050px)
-    {
-      width: 550px;
-    }
-    @media all and (max-width:780px)
-    {
-      //display: block;
-    }
-    @media all and (max-width:600px)
-    {
-        display: block;
-        margin: 0 auto;
-        width: 170px;
-        //height: 300px;
-    }
 
     background: $primary;
     
     margin-bottom: 9px;
     vertical-align: bottom;
 
-    //box-shadow: 2px 0 7px rgba(7, 40, 77, 0.5);
     box-shadow: 3px 0 7px rgb(0,0,0);
+
+    
+    @media all and (max-width:1270px)
+    {
+      //display: inline-block;
+      width: 810px;
+    }
+    @media all and (max-width:1050px)
+    {
+      //display: inline-block;
+      width: 550px;
+    }
+    @media all and (max-width:780px)
+    {
+      //display: inline-block;
+      box-shadow: 0 0 7px rgb(0,0,0);
+    }
+    @media all and (max-width:600px)
+    {
+      display: none;
+      position: absolute;
+      left: 50%;
+      margin-left: -85px;
+      margin-top: 10px;
+      width: 170px;
+      box-shadow: 0 0 7px rgb(0,0,0);
+    }
 
     ul
     {
       display: inline-block;
       margin-bottom: 0px;
-      height: 100%;
-      //min-height: 56px;
+      height: 56px;
       width: 100%;
       padding-inline-start: 0px;
-      
       li
       {
         display: inline;
         text-align: center;
-        //vertical-align: middle;
 
        &:before 
        {
@@ -206,8 +237,13 @@
          height: 100%;
          vertical-align: middle;
        }
+
       }
       
+      @media all and (max-width:600px)
+      {
+        height: 100%;
+      }
     }
 
     &__btn
@@ -245,6 +281,16 @@
       @media all and (max-width:600px)
       {
         display: block;
+        height: 40px;
+        padding-top: 9px;
+
+        border-top: 1px solid $gray;
+
+        // убираем бордер у верхней копки
+        li:nth-child(1) > & 
+        {
+          border-top: none;
+        }
       }
     
     }
