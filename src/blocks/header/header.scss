@@ -44,6 +44,32 @@
     // for inline-block inside
     text-align: right;
 
+    &__btn-show-up-menu
+    {
+      display: none;
+
+      height: 33px;
+      width: 33px;
+      background: $primary url('/img/arr-down.svg') no-repeat;
+      background-position: center center;
+      vertical-align: middle;
+      
+      &:hover
+      {
+        cursor: pointer;
+        background-color: $light_primary;
+      }
+
+      @media all and (max-width:1050px)
+      {
+        display: inline-block;
+      }
+      @media all and (max-width:780px)
+      {
+        display: inline-block;
+      }
+    }
+
     &__up-menu
     {
       display: inline-block;
@@ -51,6 +77,15 @@
       font-size: 0;
       
       vertical-align: top;
+
+      @media all and (max-width:1050px)
+      {
+        display: none;
+      }
+      @media all and (max-width:780px)
+      {
+        display: none;
+      }
 
       &__btn
       {
