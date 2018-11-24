@@ -86,7 +86,7 @@ $('#id_head-min-menu').on('click', function() {
 });
 
 // обработчик клика на кнопку UP меню
-$('.header__up-bar__btn-show-up-menu').on('click', function() {
+$('#btn-show-up-menu').on('click', function() {
 	
 	let _menu = $('.header__up-bar__up-menu');
 	
