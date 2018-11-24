@@ -1,0 +1,22 @@
+.btn-arrow 
+{
+    display: inline-block;
+    .btn-arrow-body
+	{
+        display: inline-block;
+
+        height: 33px;
+        width: 33px;
+        background: $primary; //url('/img/arr-down.svg') no-repeat;
+        background-repeat: no-repeat;
+        background-position: center center;
+        vertical-align: middle;
+          
+        &:hover
+        {
+          cursor: pointer;
+          background-color: $light_primary;
+        }
+    }
+
+}

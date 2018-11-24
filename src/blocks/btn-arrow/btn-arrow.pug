@@ -1,0 +1,12 @@
+mixin btn-arrow(arrow_direction, modifier)
+  .btn-arrow&attributes(attributes)
+    case arrow_direction
+      when 'DIR_DOWN'
+        .btn-arrow-body(style='background-image: url("img/arr-down.svg");')
+      when 'DIR_UP'
+        .btn-arrow-body(style='background-image: url("img/arr-up.svg");')
+      when 'DIR_RIGHT'
+        .btn-arrow-body(style='background-image: url("img/arr-right.svg");')
+      when 'DIR_LEFT'
+        .btn-arrow-body(style='background-image: url("img/arr-left.svg");')
+    
