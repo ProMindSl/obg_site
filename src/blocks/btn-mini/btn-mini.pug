@@ -1,0 +1,8 @@
+mixin btn-mini(btn_color_type, val,  modifier)
+  .btn-mini&attributes(attributes)
+    case btn_color_type
+      when 'COLOR_YELLOW'
+        .btn-mini__body(name='COLOR_YELLOW')=val
+      when 'COLOR_BLUE'
+        .btn-mini__body(name='COLOR_BLUE')=val
+    
