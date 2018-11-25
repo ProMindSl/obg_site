@@ -1,8 +1,4 @@
 mixin bg-slider(imgNames, modifier)
   ul.bg-slider&attributes(attributes)
-  - for(let i_img=0; i_img<imgNames.length; i_img++) {
-  -   if (i_img == 0) {
-    li.bg-slider__img(id="bg_id_1" style="background-image: url("+imgNames[0]+");  opacity: 1;")
-  -   }	
-    li.bg-slider__img(id="bg_id_"+String(i_img+1) style="background-image: url("+imgNames[i_img]+");")
-  - }    
+    each i_img, index in imgNames
+      li.bg-slider__img(id="bg_id_"+String(index+1) style="background-image: url("+i_img+");") 

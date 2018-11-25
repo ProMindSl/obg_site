@@ -6,6 +6,7 @@
   position: absolute;
   top: 0;
   right: 0;
+  
   z-index: -3;
 
   list-style: none;
@@ -19,5 +20,10 @@
     opacity: 0;
     background-size:cover;
     background-repeat:none;
+    z-index: -3;
+    &:nth-child(1)
+    {
+      opacity: 1;
+    }
   }
 }
