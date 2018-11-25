@@ -2,7 +2,7 @@
 {
   font-family: $font-family-sans-serif;
   color: $black;
-
+  z-index: -3;
   .container 
   {
     display: flex;
@@ -11,9 +11,9 @@
     align-content: center;
     min-height: 698px;
     max-width: 1366px;
-    background: #ffffff url("../img/front__bg.png") no-repeat;
+    background-color: rgba(255,255,255, 0.6);
     background-position-y: -70px;
-      
+    z-index: -3;
   }
 
 

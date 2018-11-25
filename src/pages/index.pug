@@ -2,16 +2,5 @@ extends ../templates/template.pug
 block content
   +bg-slider(['img/bg_img_10.jpg', 'img/bg_img_1.jpg', 'img/bg_img_2.jpg', 'img/bg_img_3.jpg', 'img/bg_img_4.jpg', 'img/bg_img_5.jpg'])
   +header
-  
-  .container-fluid
-    .row
-      .col-12(style="opacity: 0;")
-        h2.mt-70.text-center Форма
-      .col-xl-4.col-sm-6.offset-xl-4.offset-sm-3(style="opacity: 0;")
-        form(action="#", method="POST").d-flex.flex-column.align-items-center.mt-10
-          input.input(type="text", placeholder="Имя")
-          input.input(type="email", placeholder="Email").mt-20
-          textarea.input.input--textarea(placeholder="Сообщение").mt-20
-          .d-flex.justify-content-center.mt-30
-            input.btn(type="submit", value="Отправить")
+  +front 
   +footer(class="mt-100")
