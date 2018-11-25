@@ -58,12 +58,23 @@ $dark_primary: #223948;
 $light_primary: #243a74;
 $gray: #999;
 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 600px,
+  md: 780px,
+  lg: 1050px,
+  xl: 1270px
+);
+
 $container-max-widths: (
-  xl: 1366px 
+  sm: 570px,
+  md: 750px,
+  lg: 1010px,
+  xl: 1250px
 );
 
 $font-family-sans-serif: 'Fira Sans', 'Arial', sans-serif;
-//$font-family-sans-serif: 'Futura Condensed', 'Arial', sans-serif;
+$font-futura: 'Futura Condensed', 'Arial', sans-serif;
 
 /* Imports */
 
