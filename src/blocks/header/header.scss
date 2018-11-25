@@ -77,7 +77,7 @@
         
         background: $primary;
         text-align: center;
-        
+
         padding-left: 10px;
         padding-right: 10px;
         padding-top: 10px;
@@ -116,7 +116,7 @@
       }
     }
 
-    // ---- iu авторизации -----
+    // ---- iu авторизации при разрешении > 780px -----
     &__signin-form
     {
       display: inline-block;
@@ -160,7 +160,25 @@
                 
         }
       }
+
+      @media all and (max-width: 600px)
+      {
+        display: none;
+      }
+
     }
+
+    // ---- Кнопка авторизации в модальном окне -----
+    #id_btn-sign-in-modal
+    {
+      display: none;
+
+      @media all and (max-width: 600px)
+      {
+        display: inline-block;
+      }
+    }
+
   }
 
   

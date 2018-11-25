@@ -17,6 +17,7 @@ mixin header(modifier)
                 input.header__up-bar__signin-form__input(type="text" placeholder="Логин")
                 input.header__up-bar__signin-form__input(type="password" placeholder="Пароль")
                 input.header__up-bar__signin-form__btn.ml-3(type="submit", value="Войти")
+              +btn-mini('COLOR_YELLOW', 'Войти').ml-5(id="id_btn-sign-in-modal")
               +btn-mini('COLOR_YELLOW', 'Регистрация').ml-5
             +logo
             .header__btn-mini-menu(id="id_head-min-menu") ГЛАВНОЕ МЕНЮ
