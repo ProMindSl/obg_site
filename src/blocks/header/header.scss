@@ -7,26 +7,19 @@
   {
     // for inline-block childs
     font-size: 0;
-
     min-height: 150px;
-
-    @include media-breakpoint-up(xl)
-    {
-      max-width: 1220px;
-    }
-    //@media all and (max-width:1270px)
-    @include media-breakpoint-down(xl)
+    max-width: 1220px;
+    
+    @media all and (max-width:1270px)
     {
       max-width: 980px;
     }
-    //@media all and (max-width:1050px)
-    @include media-breakpoint-down(lg)
+    @media all and (max-width:1050px)
     {
       text-align: center;
       max-width: 720px;
     }
-    //@media all and (max-width:780px)
-    @include media-breakpoint-down(md)
+    @media all and (max-width:780px)
     {
       text-align: center;
       max-width: 720px;
@@ -34,7 +27,7 @@
 
   }
   
-  // ---- Верхняя панель -----  
+  // ---- Верхняя панель-контейнер -----  
   &__up-bar
   {
     display: block;
@@ -50,8 +43,7 @@
     {
       display: none;
        
-      //@media all and (max-width:1050px)
-      @include media-breakpoint-down(lg)
+      @media all and (max-width:1050px)
       {
         display: inline-block;
       }
@@ -65,9 +57,7 @@
       font-size: 0;
       z-index: 101;
       vertical-align: top;
-
-      //@media all and (max-width:1050px)
-      @include media-breakpoint-down(lg)
+      @media all and (max-width:1050px)
       {
         display: none;
         position: absolute;
@@ -79,37 +69,39 @@
 
       &__btn
       {
+                 
+          height: 33px;
+          
+          background: $primary;
+          text-align: center;
+
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-top: 10px;
+      
+
+
+          font-size: 11px;
+          vertical-align: middle;
+          color: #fff;
+          @include transitionM(color, 0.3s);
+            
+          &:hover
+          {
+            cursor: pointer;
+            color: $primary_yellow;
+            @include transitionM(color, 0.3s);
+          }
+        
         display: inline-block;
         min-width: 80px;
-        height: 33px;
+        border-right: 1px solid #4670db;
+        &:last-child
+        {
+          border-right: none;
+        }
         
-        background: $primary;
-        text-align: center;
-
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 10px;
-
-        &:nth-child(1),
-        &:nth-child(2)
-        {
-          border-right: 1px solid #4670db;
-        }
-
-        font-size: 11px;
-        vertical-align: middle;
-        color: #fff;
-        @include transitionM(color, 0.3s);
-          
-        &:hover
-        {
-          cursor: pointer;
-          color: $primary_yellow;
-          @include transitionM(color, 0.3s);
-        }
-
-        //@media all and (max-width:1050px)
-        @include media-breakpoint-down(lg)
+        @media all and (max-width:1050px)
         {
           display: block;
           min-width: 200px;
@@ -128,48 +120,48 @@
     // ---- iu авторизации при разрешении > 780px -----
     &__signin-form
     {
-      display: inline-block;
-      height: 33px;
-      
-      //for i-b
-      font-size: 0px;
-
-      &__input
-      {
-        display: inline-block;
-        //display: none;
-        height: 25px;
-        width: 80px;
-        font-size: 11px;
-        color: $gray;
-        padding-left: 3px;
-        
-        vertical-align: middle;
-
-        @include placeholder($gray, $font-family-sans-serif, 11px, 300);
-      }
-
-      &__btn
-      {
         display: inline-block;
         height: 33px;
-        min-width: 60px;
-        font-size: 11px;
-        background: $primary_yellow;
-        color: $primary;
-        vertical-align: middle;
+        
+        //for i-b
+        font-size: 0px;
 
-        @include transitionM(background-color, 0.3s);
-              
-        &:hover
+        &__input
         {
-          cursor: pointer;
-          background: $dark_primary_yellow;
+          display: inline-block;
+          //display: none;
+          height: 25px;
+          width: 80px;
+          font-size: 11px;
+          color: $gray;
+          padding-left: 3px;
+          
+          vertical-align: middle;
+
+          @include placeholder($gray, $font-family-sans-serif, 11px, 300);
+        }
+
+        &__btn
+        {
+          display: inline-block;
+          height: 33px;
+          min-width: 60px;
+          font-size: 11px;
+          background: $primary_yellow;
+          color: $primary;
+          vertical-align: middle;
+
           @include transitionM(background-color, 0.3s);
                 
+          &:hover
+          {
+            cursor: pointer;
+            background: $dark_primary_yellow;
+            @include transitionM(background-color, 0.3s);
+                  
+          }
         }
-      }
-
+      
       @media all and (max-width: 600px)
       {
         display: none;
@@ -180,8 +172,9 @@
     // ---- Кнопка авторизации в модальном окне -----
     #id_btn-sign-in-modal
     {
+      
       display: none;
-
+      
       @media all and (max-width: 600px)
       {
         display: inline-block;
@@ -194,10 +187,11 @@
   // ---- Лого -----
   a.logo
   {
-    display: inline-block;
-    z-index: 100;
-    box-shadow: 0 0 10px rgba(7, 40, 77, 0.5);
-
+    
+      display: inline-block;
+      z-index: 100;
+      box-shadow: 0 0 10px rgba(7, 40, 77, 0.5);
+    
     @media all and (max-width:780px)
     {
       display: block;
@@ -241,7 +235,7 @@
   {
     z-index: 100;
     display: inline-block;
-    width: 1050px;
+    
     min-height: 56px;
 
     background: $primary;
@@ -251,7 +245,9 @@
 
     box-shadow: 3px 0 7px rgb(0,0,0);
 
-    //
+    
+      width: 1050px;
+    
     @media all and (max-width:1270px)
     {
       //display: inline-block;
@@ -281,10 +277,9 @@
     ul
     {
       display: inline-block;
-      margin-bottom: 0px;
-      height: 56px;
       width: 100%;
       padding-inline-start: 0px;
+      margin-bottom: 0px;
       li
       {
         display: inline;
@@ -300,16 +295,20 @@
 
       }
       
+      
+        height: 56px;
+      
       @media all and (max-width:600px)
       {
         height: 100%;
+      
       }
     }
 
     &__btn
     {
       display: inline-block;
-      min-width: 150px;
+      
 
       font-family: 'Futura Condensed';
       font-weight: bold;
@@ -327,6 +326,9 @@
         @include transitionM(color, 0.3s);
       }
 
+
+      
+        min-width: 150px;
       @media all and (max-width: 1270px)
       {
         min-width: 100px;
@@ -335,8 +337,7 @@
       {
         min-width: 50px;
         margin-left: 15px;
-        margin-right: 15px;
-        
+        margin-right: 15px;        
       }
       @media all and (max-width:600px)
       {
