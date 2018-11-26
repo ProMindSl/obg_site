@@ -120,7 +120,8 @@ function windowResizeHandler_fromHeader()
 	let _up_menu = $('.header__up-bar__up-menu');
 
 	// для main menu
-	if ($(window).width() > '600')
+	//if ($(window).width() > '600')
+	if (matchMedia('only screen and (min-width: 600px)').matches)
 	{
 		if(_menu.css('display') == 'none')	_menu.css({'display': 'inline-block'});
 	}
@@ -130,7 +131,8 @@ function windowResizeHandler_fromHeader()
 	} 
 
 	// для up menu
-	if ($(window).width() > '1050')
+	//if ($(window).width() > '1050')
+	if (matchMedia('only screen and (min-width: 1050px)').matches)
 	{
 		if(_up_menu.css('display') == 'none')	_up_menu.css({'display': 'inline-block'});
 	}
