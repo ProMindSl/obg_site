@@ -184,19 +184,25 @@
 
   
   // ---- Лого -----
-  a.logo
-  {
-    
+  #container_logo //.cont_logo
+  { 
+    display: inline-block;
+    perspective: 25px;
+    #inner_logo //a.logo
+    {
+      transition: transform 0.5s;
+
       display: inline-block;
       z-index: 100;
       box-shadow: 0 0 10px rgba(7, 40, 77, 0.5);
-    
-    @media all and (max-width:780px)
-    {
-      display: block;
-      margin: 0 auto;
-      margin-top: 20px;
-      margin-bottom: 20px;
+      
+      @media all and (max-width:780px)
+      {
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
     }
   }
 
@@ -242,8 +248,8 @@
     margin-bottom: 9px;
     vertical-align: bottom;
 
-    box-shadow: 3px 0 7px rgb(0,0,0);
-
+    //box-shadow: 3px 0 7px rgb(0,0,0);
+    box-shadow: 0 0 7px rgb(0,0,0);
     
       width: 1050px;
     
@@ -262,14 +268,6 @@
       width: 550px;
       box-shadow: 0 0 7px rgb(0,0,0);
     }
-    /*@media all and (max-width:640px)
-    {
-      width: 570px;
-    }
-    @media all and (max-width:615px)
-    {
-      width: 540px;
-    }*/
     @media all and (max-width:600px)
     {
       display: none;
