@@ -10,3 +10,9 @@ mixin front(titles, discs, hrefs, img_srcs, modifier)
                   h1.front__caption__title=titles[index]
                   p.front__caption__discr=discs[index]
                 +btn-arrow-title('COLOR_BLUE', 'ПОДРОБНЕЕ', '#')(name="btn-more-"+String(index+1))
+      .row
+        .col-xl-5.col-lg-6.col-md-8.col-sm-10.offset-lg-0.offset-md-0.offset-sm-1
+          .front__slider-switcher
+            .front__slider-switcher__mask
+            a.front__slider-switcher__btn(id='slider-btn-left')
+            a.front__slider-switcher__btn(id='slider-btn-right')
