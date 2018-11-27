@@ -1,16 +1,12 @@
-mixin front(modifier)
+mixin front(titles, discs, hrefs, img_srcs, modifier)
   .front&attributes(attributes)
     .container
       .row
         .col-xl-5.col-lg-6.col-md-8.col-sm-10.offset-lg-0.offset-md-0.offset-sm-1
           ul
-            li
-              .front__caption(name="caption-1")
-                h1.front__caption__title АМБИЦИИ НЕ ПОДОЖДУТ
-                p.front__caption__discr Пробный текст для отображения блоков. Еще пробный текст для отображения блоков. И еще пробный текст в большом при большом количестве - мноооогоооо тееексста !!!.
-              +btn-arrow-title('COLOR_BLUE', 'ПОДРОБНЕЕ', '#')(name="btn-more-1")
-            li
-              .front__caption(name="caption-2")
-                h1.front__caption__title АМБИЦИИ ПОДОЖДУТ
-                p.front__caption__discr Пробный текст для отображения блоков. Еще пробный текст для отображения блоков. И еще пробный текст в большом при большом количестве - мноооогоооо тееексста !!!.
-              +btn-arrow-title('COLOR_BLUE', 'ПОДРОБНЕЕ', '#')(name="btn-more-2")
+            each title, index in titles
+              li
+                .front__caption(name="caption-"+String(index+1))
+                  h1.front__caption__title=titles[index]
+                  p.front__caption__discr=discs[index]
+                +btn-arrow-title('COLOR_BLUE', 'ПОДРОБНЕЕ', '#')(name="btn-more-"+String(index+1))
