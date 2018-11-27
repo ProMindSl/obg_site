@@ -1,0 +1,86 @@
+.btn-arrow-title 
+{
+    display: inline-block;
+
+    &__body
+	{
+        display: inline-block;
+
+        height: 37px;
+        min-width: 60px;
+        vertical-align: middle;
+        
+
+        // общие стили для компонентов кнопки
+        &__arr
+        {
+            display: inline-block;
+            width: 37px;
+            height: 37px;
+
+            padding: 6px;
+        }
+
+        &__val
+        {
+            display: inline-block;
+
+            font-family: $font-futura;
+            font-weight: bold;
+            font-size: 20px;
+            height: 37px;
+
+            padding-top: 6px;
+            padding-left: 15px;
+            padding-right: 15px;
+
+            text-align: center;
+            vertical-align: top;
+
+            &:hover
+            {
+                cursor: pointer;
+                text-decoration: underline;                  
+            }
+        }
+
+        // специфичные стили для разных видов кнопок
+        &__arr[name='COLOR_YELLOW']
+        {
+            background-color: $primary;
+
+            svg
+            {
+                path.arr-main
+                {
+                    fill: #fff;
+                }
+            }
+        }
+        &__val[name='COLOR_YELLOW']
+        {
+            color: $primary;
+            background: $primary_yellow;
+        }
+        
+        
+        &__arr[name='COLOR_BLUE']
+        {
+            background-color: $primary_yellow;
+
+            svg
+            {
+                path.arr-main
+                {
+                    fill: &primary;
+                }
+            }
+        }
+
+        &__val[name='COLOR_BLUE']
+        {   
+            color: #fff;
+            background: $primary;
+        }
+    }
+}
