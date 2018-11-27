@@ -1,7 +1,8 @@
 .btn-arrow-title 
 {
     display: inline-block;
-
+    font-size: 0px;
+    
     &__body
 	{
         display: inline-block;
@@ -19,6 +20,19 @@
             height: 37px;
 
             padding: 6px;
+
+             svg
+            {
+                path.arr-main
+                {
+                    fill: &primary;
+
+                    .btn-arrow-title__body:hover > &
+                    {
+                        animation: arrow-move 1s ease-in-out infinite;
+                    }
+                }
+            }
         }
 
         &__val
@@ -37,7 +51,7 @@
             text-align: center;
             vertical-align: top;
 
-            &:hover
+            .btn-arrow-title__body:hover > &
             {
                 cursor: pointer;
                 text-decoration: underline;                  
@@ -82,5 +96,13 @@
             color: #fff;
             background: $primary;
         }
+    }
+
+    // Анимация стрелки
+    @keyframes arrow-move
+    {
+        0%{transform:translateX(0px);}
+        50%{transform: translateX(3px);}
+        100%{transform:translateX(0px);}
     }
 }

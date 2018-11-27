@@ -9,9 +9,9 @@ mixin btn-arrow-title(btn_color_type, val, i_href,  modifier)
               path.arr-main(d="M13.207 8.472l-7.854 7.854-0.707-0.707 7.146-7.146-7.146-7.148 0.707-0.707 7.854 7.854z" fill="#fff")
           a(href=i_href).btn-arrow-title__body__val(name='COLOR_YELLOW')=val
       when 'COLOR_BLUE'
-        .btn-arrow-title__body
+        a(href=i_href).btn-arrow-title__body
           .btn-arrow-title__body__arr(name='COLOR_BLUE')
             svg(version="1.1" width="25" height="25" viewBox="0 0 17 17")
               g
               path.arr-main(d="M13.207 8.472l-7.854 7.854-0.707-0.707 7.146-7.146-7.146-7.148 0.707-0.707 7.854 7.854z" fill="#000")
-          a(href=i_href).btn-arrow-title__body__val(name='COLOR_BLUE')=val    
+          .btn-arrow-title__body__val(name='COLOR_BLUE')=val    
