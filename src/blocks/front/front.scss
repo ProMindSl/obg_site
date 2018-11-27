@@ -9,6 +9,7 @@
     //background-color: rgba(255,255,255, 0.6);
     z-index: -3;
 
+    // управление списком заголовков слайдов
     ul
     {
       list-style: none;
@@ -16,6 +17,17 @@
       li
       {
         display: inline;
+
+        // выключаем отображение всех кнопок "подробнее", кроме первой
+        .btn-arrow-title
+        {
+          display: none;
+
+          &[name='btn-more-1']
+          {
+            display: inline-block;
+          }
+        }
       }
     }
   }
