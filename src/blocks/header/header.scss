@@ -188,16 +188,18 @@
   { 
     display: inline-block;
     perspective: 25px;
+    z-index: 150;
     #inner_logo //a.logo
     {
       transition: transform 0.5s;
 
       display: inline-block;
-      z-index: 100;
+      z-index: 150;
       box-shadow: 0 0 10px rgba(7, 40, 77, 0.5);
       
       @media all and (max-width:780px)
       {
+
         display: block;
         margin: 0 auto;
         margin-top: 20px;
@@ -238,6 +240,7 @@
   // ---- Главное меню -----
   &__menu
   {
+    //perspective: -1px;
     z-index: 100;
     display: inline-block;
     

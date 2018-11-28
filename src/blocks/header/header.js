@@ -124,8 +124,10 @@ function windowResizeHandler_fromHeader()
 	if (matchMedia('only screen and (min-width: 600px)').matches)
 	{
 		if(_menu.css('display') == 'none')	_menu.css({'display': 'inline-block'});
+		if(_menu.css('transform') != 'none')_menu.css({'transform':'none'});
 	}
-	else if ($(window).width() <= '600')
+	//else if ($(window).width() <= '600')
+	else if (matchMedia('only screen and (max-width: 599px)').matches)
 	{
 		_menu.css({'display': 'none'});
 	} 
@@ -136,7 +138,8 @@ function windowResizeHandler_fromHeader()
 	{
 		if(_up_menu.css('display') == 'none')	_up_menu.css({'display': 'inline-block'});
 	}
-	else if ($(window).width() <= '1050')
+	//else if ($(window).width() <= '1050')
+	else if (matchMedia('only screen and (max-width: 1049px)').matches)
 	{
 		_up_menu.css({'display': 'none'});
 	} 
