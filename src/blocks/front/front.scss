@@ -68,7 +68,7 @@
       @include media-breakpoint-down(xs)
       {
         text-align: center;
-        font-size: 28px;
+        font-size: 18px;
       }
     }
 
@@ -90,13 +90,14 @@
 
     position: relative; 
 
-    //background-color: red;
+    background-color: red;
 
     &__mask
     {
       display: inline-block;
       margin-left: 40px;
-      width: 84%;
+      //max-width: 83.9%;
+
       height: 130px;
 
       background-color: rgba(50,50,250, 0.4);
