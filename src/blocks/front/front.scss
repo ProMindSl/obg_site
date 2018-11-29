@@ -87,20 +87,37 @@
   {
     min-width: 30px;
     height: 130px;
-
     position: relative; 
-
-    background-color: red;
+    text-align: center;
+    //background-color: red;
 
     &__mask
     {
       display: inline-block;
-      margin-left: 40px;
-      //max-width: 83.9%;
+      //margin-left: 40px;
+      width: 80.5%;
 
       height: 130px;
 
-      background-color: rgba(50,50,250, 0.4);
+      background-color: rgba(50,50,250, 0.3);
+
+      @include media-breakpoint-down(xl)
+      {
+        width: 79.5%;
+      }
+      @include media-breakpoint-down(lg)
+      {
+        width: 79.7%;
+      }
+      @include media-breakpoint-down(md)
+      {
+        width: 80.5%;
+      }
+      @include media-breakpoint-down(sm)
+      {
+        width: 60%;
+
+      }
     }
 
     &__btn
