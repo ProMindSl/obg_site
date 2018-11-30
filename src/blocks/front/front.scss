@@ -94,12 +94,11 @@
     &__mask
     {
       display: inline-block;
-      //margin-left: 40px;
-      width: 80.5%;
+      overflow: hidden;
 
       height: 130px;
 
-      background-color: rgba(50,50,250, 0.3);
+      background-color: rgba(50,150,250, 0.3);
 
       @include media-breakpoint-down(xl)
       {
@@ -116,8 +115,63 @@
       @include media-breakpoint-down(sm)
       {
         width: 60%;
-
       }
+
+      &__list
+      {
+        position: relative;
+        display: block;
+        width: 3000px;
+        height: 130px;
+        list-style: none;
+        text-align: center;
+
+        background: black;
+
+        &__item
+        {
+          display: block;
+          float: left;
+          margin: 0 10px 0 0;
+          width: 80px;
+          height: 120px;
+
+          background: red;
+          font-size: 15px;
+
+          &[data-index="2"]
+          {
+            background: blue;
+          }
+          &[data-index="3"]
+          {
+            background: yellow;
+          }
+          &[data-index="4"]
+          {
+            background: green;
+          }
+          &[data-index="5"]
+          {
+            background: pink;
+          }
+          &[data-index="7"]
+          {
+            background: white;
+          }
+        }
+
+        &:after 
+        {
+          visibility: hidden;
+          display: block;
+          font-size: 0;
+          content: " ";
+          clear: both;
+          height: 0;
+        }
+      }
+
     }
 
     &__btn
