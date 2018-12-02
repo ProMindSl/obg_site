@@ -1,12 +1,12 @@
-mixin front(titles, discs, hrefs, img_srcs, modifier)
+mixin front(titles, discs, hrefs, modifier)
   .front&attributes(attributes)
     .container
       .row
         .col-xl-5.col-lg-6.col-md-8.col-sm-10.offset-lg-0.offset-md-0.offset-sm-1
           ul
             each title, index in titles
-              li
-                .front__caption(name="caption-"+String(index+1))
+              li.front__caption-container(name="caption-"+String(index+1))
+                .front__caption
                   h1.front__caption__title=titles[index]
                   p.front__caption__discr=discs[index]
                 +btn-arrow-title('COLOR_BLUE', 'ПОДРОБНЕЕ', '#')(name="btn-more-"+String(index+1))
@@ -14,14 +14,10 @@ mixin front(titles, discs, hrefs, img_srcs, modifier)
         .col-xl-4.col-lg-5.col-md-7.col-sm-10.offset-xl-1.offset-lg-1.offset-md-1.offset-sm-1
           .front__slider-switcher
             .front__slider-switcher__mask
-              ul.front__slider-switcher__mask__list
-                li(data-index="1").front__slider-switcher__mask__list__item 1
-                li(data-index="2").front__slider-switcher__mask__list__item 2
-                li(data-index="3").front__slider-switcher__mask__list__item 3
-                li(data-index="4").front__slider-switcher__mask__list__item 4
-                li(data-index="5").front__slider-switcher__mask__list__item 5
-                li(data-index="6").front__slider-switcher__mask__list__item 6
-                li(data-index="7").front__slider-switcher__mask__list__item 7
-                li(data-index="8").front__slider-switcher__mask__list__item 8
+              ul.front__slider-switcher__mask__list(data-bias="false")
+                each title, index in titles
+                  li.front__slider-switcher__mask__list__item(data-index='"'+String(index+1)+'"')
+                    img(src="img/item_img_"+String(index+1)+".jpg" width="81" height="65")
+                    p.front__slider-switcher__mask__list__item__title=titles[index]
             a.front__slider-switcher__btn(id='slider-btn-left')
             a.front__slider-switcher__btn(id='slider-btn-right')

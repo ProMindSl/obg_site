@@ -6,7 +6,6 @@
   .container 
   {
     min-height: 500px;
-    //background-color: rgba(255,255,255, 0.6);
     z-index: -3;
 
     // управление списком заголовков слайдов
@@ -14,42 +13,38 @@
     {
       list-style: none;
       padding-inline-start: 0px;
-      li
+      
+      li.front__caption-container 
       {
-        display: inline;
-
-        // выключаем отображение всех кнопок "подробнее", кроме первой
+        //display: inline;
+        display: none;
+        //первый активный заголовок 
+        &[name='caption-2']
+        {
+          display: block;
+        }
+        // отображение кнопок "подробнее"
         .btn-arrow-title
         {
-          display: none;
-
-          &[name='btn-more-1']
-          {
             display: inline-block;
-          }
         }
       }
     }
   }
 
-
+  
   &__caption
   {
     min-height: 250px;
     background-color: $primary;
     padding: 20px 20px 10px;
     
-    display: none;
-    //первый активный заголовок 
-    &[name='caption-1']
-    {
-      display: block;
-    }
 
     &__title
     {
       font-family: $font-futura;
       font-size: 55px;
+      line-height: 55px;
       font-weight: bold;
       color: #ffffff;
 
@@ -74,7 +69,7 @@
 
     &__discr
     {
-      font-family: 'Arial'; //$font-family-sans-serif;
+      font-family: 'Arial'; 
       font-size: 14px;
       font-weight: normal;
       line-height: 20px;
@@ -89,7 +84,8 @@
     height: 130px;
     position: relative; 
     text-align: center;
-    //background-color: red;
+    background-color: rgba(255, 255,255, 0.4);
+    box-shadow: 0 0 15px rgba(255, 255,255, 0.4);
 
     &__mask
     {
@@ -97,8 +93,6 @@
       overflow: hidden;
 
       height: 130px;
-
-      background-color: rgba(50,150,250, 0.3);
 
       @include media-breakpoint-down(xl)
       {
@@ -110,11 +104,11 @@
       }
       @include media-breakpoint-down(md)
       {
-        width: 80.5%;
+        width: 76.5%;
       }
       @include media-breakpoint-down(sm)
       {
-        width: 60%;
+        width: 62%;
       }
 
       &__list
@@ -126,39 +120,79 @@
         list-style: none;
         text-align: center;
 
-        background: black;
+        //background: black;
 
         &__item
         {
           display: block;
           float: left;
           margin: 0 10px 0 0;
-          width: 80px;
-          height: 120px;
+          width: 95px;
+          height: 130px;
 
           background: red;
           font-size: 15px;
 
-          &[data-index="2"]
+          border: 3px solid $primary;
+          background: $primary;
+          
+          
+          // Отображение активного и ссылочных слайдов при отсутствии смещения
+          .front__slider-switcher__mask__list[data-bias="false"] > &:nth-child(2)
           {
-            background: blue;
+            border: 3px solid white;
+            color: pink;
           }
-          &[data-index="3"]
+          .front__slider-switcher__mask__list[data-bias="false"] > &:nth-child(1),
+          .front__slider-switcher__mask__list[data-bias="false"] > &:nth-child(3)
           {
-            background: yellow;
+            cursor: pointer;
+
+            @include transitionM(border-color, 0.3s)
+            &:hover
+            {
+              border: 3px solid white;
+              @include transitionM(border-color, 0.3s)
+            }
           }
-          &[data-index="4"]
+
+
+          // Отображение активного и ссылочных слайдов при смещения
+          .front__slider-switcher__mask__list[data-bias="true"] > &:nth-child(3)
           {
-            background: green;
+            border: 3px solid white;
+            color: pink;
           }
-          &[data-index="5"]
+          .front__slider-switcher__mask__list[data-bias="true"] > &:nth-child(2),
+          .front__slider-switcher__mask__list[data-bias="true"] > &:nth-child(4)
           {
-            background: pink;
+            cursor: pointer;
+
+            @include transitionM(border-color, 0.3s)
+            &:hover
+            {
+              border: 3px solid white;
+              @include transitionM(border-color, 0.3s)
+            }
           }
-          &[data-index="7"]
+
+          img
           {
-            background: white;
+            margin-top: 5px;
+            background-color: $light_primary;
           }
+
+          &__title
+          {
+            color: white;
+            margin-top: 2px;
+            padding: 5px;
+            font-size: 11px;
+            text-align: left;
+            line-height: 13px;
+            cursor: pointer;
+          }
+
         }
 
         &:after 
@@ -180,7 +214,7 @@
       width: 40px;
       height: 130px;
 
-      background: rgba(250,250,250, 0.4) url(/img/btn-next.svg) no-repeat;
+      background: rgba(250,250,250, 0) url(/img/btn-next.svg) no-repeat;
       background-position: center center;
       opacity: 0.8;
 
