@@ -55,7 +55,7 @@
       display: inline-block;
       padding-inline-start: 0;
       font-size: 0;
-      z-index: 101;
+      z-index: 1010;
       vertical-align: top;
       @media all and (max-width:1050px)
       {
@@ -240,7 +240,6 @@
   // ---- Главное меню -----
   &__menu
   {
-    //perspective: -1px;
     z-index: 100;
     display: inline-block;
     
@@ -286,6 +285,7 @@
     {
       display: inline-block;
       width: 100%;
+      padding-left:0;
       padding-inline-start: 0px;
       margin-bottom: 0px;
       li
