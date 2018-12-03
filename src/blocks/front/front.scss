@@ -53,8 +53,9 @@
     {
       font-family: $font-futura;
       font-size: 55px;
-      line-height: 55px;
+      line-height: 45px;
       font-weight: bold;
+
       color: #ffffff;
 
       @include media-breakpoint-down(lg)
@@ -157,7 +158,7 @@
 
           border: 3px solid $primary;
           background: $primary;
-          
+          cursor: pointer;
           
           // Отображение активного и ссылочных слайдов при отсутствии смещения
           .front__slider-switcher__mask__list[data-bias="false"] > &:nth-child(2)
@@ -202,6 +203,7 @@
           {
             margin-top: 5px;
             background-color: $light_primary;
+            user-select: none;
           }
 
           &__title
@@ -215,6 +217,7 @@
             text-align: left;
             line-height: 14px;
             cursor: pointer;
+            user-select: none;
           }
 
         }

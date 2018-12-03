@@ -118,15 +118,19 @@ function get_curr_slider_items() // возвращаем текущий айте
 
 function setListenersForSliderItems()
 {
-    get_curr_slider_items().leftItem.bind('click', move_right);
-    get_curr_slider_items().rightItem.bind('click', move_left);  
+    //get_curr_slider_items().leftItem.bind('click', move_right);
+    //get_curr_slider_items().rightItem.bind('click', move_left);
+    get_curr_slider_items().leftItem.on('click', move_right);
+    get_curr_slider_items().rightItem.on('click', move_left);   
 }
 
 function removeListenersForSliderItems()
 {
 
-    get_curr_slider_items().leftItem.unbind('click');
-    get_curr_slider_items().rightItem.unbind('click');
+    //get_curr_slider_items().leftItem.unbind('click');
+    //get_curr_slider_items().rightItem.unbind('click');
+    get_curr_slider_items().leftItem.off('click');
+    get_curr_slider_items().rightItem.off('click');
 }
 
 // for caption 

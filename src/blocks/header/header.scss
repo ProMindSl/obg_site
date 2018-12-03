@@ -281,17 +281,18 @@
       box-shadow: 0 0 7px rgb(0,0,0);
     }
 
-    ul
+    &__list
     {
       display: inline-block;
       width: 100%;
       padding-left:0;
       padding-inline-start: 0px;
       margin-bottom: 0px;
-      li
+      &__item
       {
         display: inline;
         text-align: center;
+        width: 0px;
 
        &:before 
        {
@@ -319,7 +320,7 @@
       
 
       font-family: 'Futura Condensed';
-      font-weight: bold;
+      //font-weight: bold;
       font-size: 17px;
       color: #fff;
       margin-left: 40px;

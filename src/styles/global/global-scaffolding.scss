@@ -1,6 +1,12 @@
+
 html
 {
   height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-inline-start: unset;
+  //-webkit-margin-before: 0;
+  //-webkit-margin-after: 0;
 }
 
 body
