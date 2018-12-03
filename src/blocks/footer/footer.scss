@@ -4,18 +4,53 @@
   left: 0;
   right: 0;
   bottom: 0; 
-  height: 140px; 
-  border-top: 1px solid #e0e0e0;
+  height: 110px; 
   z-index: 1040;
+  background: $primary_yellow;
+  box-shadow: 0 0 20px rgba(0,0,0,.8);
+
+  @include media-breakpoint-down(xs)
+  {
+    position: absolute;
+    height: 250px;
+    //margin-top: 130px;
+  }
+
+  // bg футера (для охвата 100% ширины без контейнеров)
+  &__bg-upper-side
+  {
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    background: red;
+
+    margin-left: -15px;
+    margin-right: 0px;
+
+    border-bottom: 1px solid #d8a420;
+
+    background-color: $primary_yellow;
+    @include transitionM(background-color, 0.3s)
+    &:hover
+    {
+      background-color: $dark_primary_yellow;
+      @include transitionM(background-color, 0.3s)
+    }
+
+    @include media-breakpoint-down(xs)
+    {
+      height: 125px;
+    }
+  }
 
   &__top 
   {
   	display: flex;
   	justify-content: space-between;
   	align-content: space-between;
-    min-height: 140px;
+    min-height: 55px;
     max-width: 1220px;
-
+    
     
 
     /* компенсация отступов сетки bootstrap  */
@@ -26,27 +61,26 @@
   &__sitemap 
   {
     display: inline-flex;
-   	//margin-left: 15px;
-    margin-top: 20px;
+    margin-top: 10px;
 
-   	/* Перестройка меню карты сайта при маленьком разрешении */
-    @media all and (max-width: 550px)
-  	{
-  	  display: flex;
+    @include media-breakpoint-down(xs)
+    {
       flex-direction: column;
-  	}
+    }
+   	
   }
   
   &__link 
   {
     display: inline-flex;
     align-items: center;
-    color: #1a1a1a;
-	  font-family: $font-family-sans-serif;
-	  font-size: 16px;
-	  font-weight: 300;
+    font-family: $font-futura;
+    font-size: 16px;
+    font-weight: bold;
 	  height: 50px;
-	  margin-left: 30px;
+    text-transform: uppercase;
+
+    margin-left: 30px;
 
   	&:nth-child(1)
   	{
@@ -54,10 +88,12 @@
   	}
 
   	/* Правка отступов кнопок для маленького разрешения*/
-  	@media all and (max-width: 550px)
+  	//@media all and (max-width: 550px)
+    @include media-breakpoint-down(xs)
   	{
+      height: 30px;
   		margin-left: 0;
-  		
+  		text-align: center;
       &:last-child
   		{
   			margin-bottom: 30px;
@@ -72,16 +108,45 @@
   &__copyright 
   {
   	display: block; 
-  	min-height: 45px;
-    max-width: 1366px;
-  	font-family: $font-family-sans-serif;
-  	font-size: 16px;
-	  font-weight: 300;
-	  color: #828282;
-    padding-left: 15px;
+  	//min-height: 45px;
 
-    /* компенсация отступов сетки bootstrap  */
-    margin-right: -15px; 
-    margin-left: -15px;
+    font-family: "Arial", sans-serif;
+    color: #333;
+  	font-size: 12px;
+	  font-weight: 300;
+
+    padding-top: 15px;
+    @include media-breakpoint-down(xl)
+    {
+      margin-right: 172px;
+    }
+    @include media-breakpoint-down(lg)
+    {
+      padding-right: 172px;
+      padding-top: 5px;
+    }
+    @include media-breakpoint-down(sm)
+    {
+      padding-right: 0px;
+    }
+  }
+
+  &__btn-box
+  {
+    display: block;
+    position: absolute;
+    width: 127px;
+    height: 127px;
+
+    top: -75px;
+    right: 0px;
+    background-color: $light_primary;
+
+    box-shadow: 0 0 20px rgba(0,0,0,.7);
+
+    @include media-breakpoint-down(sm)
+    {
+      display:none;
+    }
   }
 }
