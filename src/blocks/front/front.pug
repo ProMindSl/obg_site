@@ -16,7 +16,7 @@ mixin front(titles, discs, hrefs, modifier)
             .front__slider-switcher__mask
               ul.front__slider-switcher__mask__list(data-bias="false")
                 each title, index in titles
-                  li.front__slider-switcher__mask__list__item(data-index=String(index+1))
+                  li.front__slider-switcher__mask__list__item(data-index=String(index+1) is-curr='false')
                     img(src="img/item_img_"+String(index+1)+".jpg" width="81" height="65")
                     p.front__slider-switcher__mask__list__item__title=titles[index]
             a.front__slider-switcher__btn(id='slider-btn-left')

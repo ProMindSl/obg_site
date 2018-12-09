@@ -34,12 +34,39 @@
        url('../fonts/fira-sans-v8-cyrillic_latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
        url('../fonts/fira-sans-v8-cyrillic_latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
+/* Futura Condensed */
 @font-face {
   font-family: 'Futura Condensed';
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   src: local('Futura Condensed Regular'), local('Futura-Condensed-Regular'),
        url('../fonts/Futura-Condenced-Normal.woff') format('woff'), /* Chrome 26+, Opera 23+, Firefox 39+ */
        
 }
+
+
+/*@font-face {
+  font-family: 'Futura Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Futura Condensed Bold'), local('Futura-Condensed-Bold'),
+       url('../fonts/Futura-Condenced-Bold.woff') format('woff'), 
+       
+}*/
+
+/*@font-face {
+  font-family: 'Teds';
+  font-style: normal;
+  font-weight: 400;
+  src: local('TT Teds Bold'), local('TT-Teds-Bold'),
+       url('../fonts/TT-Teds-Bold.ttf') format('ttf'), 
+       
+}*/
+/*@font-face {
+  font-family: 'Teds';
+  font-style: normal;
+  font-weight: bold;
+  src: local('TT Teds ExtraBold'), local('TT-Teds-ExtraBold'),
+       url('../fonts/TTMilksCasual-700Two.otf') format('otf'), 
+       
+}*/

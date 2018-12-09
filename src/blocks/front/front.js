@@ -98,15 +98,15 @@ function get_curr_slider_items() // возвращаем текущий айте
     // выбираем обекты в зависимости от наличия смещения
     if (bias)
     { 
-        curr_item = ulMask.find('li.front__slider-switcher__mask__list__item:nth-child(3)');
-        left_item = ulMask.find('li.front__slider-switcher__mask__list__item:nth-child(2)');
-        right_item = ulMask.find('li.front__slider-switcher__mask__list__item:nth-child(4)');
+        curr_item = ulMask.children('li.front__slider-switcher__mask__list__item:nth-child(3)');
+        left_item = ulMask.children('li.front__slider-switcher__mask__list__item:nth-child(2)');
+        right_item = ulMask.children('li.front__slider-switcher__mask__list__item:nth-child(4)');
     }
     if (!bias)
     {
-        curr_item = ulMask.find('li.front__slider-switcher__mask__list__item:nth-child(2)');
-        left_item = ulMask.find('li.front__slider-switcher__mask__list__item:nth-child(1)');
-        right_item = ulMask.find('li.front__slider-switcher__mask__list__item:nth-child(3)');
+        curr_item = ulMask.children('li.front__slider-switcher__mask__list__item:nth-child(2)');
+        left_item = ulMask.children('li.front__slider-switcher__mask__list__item:nth-child(1)');
+        right_item = ulMask.children('li.front__slider-switcher__mask__list__item:nth-child(3)');
     }
 
     //console.log(curr_item.attr('data-index'));
@@ -118,19 +118,25 @@ function get_curr_slider_items() // возвращаем текущий айте
 
 function setListenersForSliderItems()
 {
+    //console.log($('ul.front__slider-switcher__mask__list').find('li.front__slider-switcher__mask__list__item:nth-child(1)'));
+    
+    get_curr_slider_items().currentItem.attr('is-curr', 'true');
     //get_curr_slider_items().leftItem.bind('click', move_right);
     //get_curr_slider_items().rightItem.bind('click', move_left);
     get_curr_slider_items().leftItem.on('click', move_right);
-    get_curr_slider_items().rightItem.on('click', move_left);   
+    get_curr_slider_items().rightItem.on('click', move_left); 
+
 }
 
 function removeListenersForSliderItems()
 {
-
-    //get_curr_slider_items().leftItem.unbind('click');
-    //get_curr_slider_items().rightItem.unbind('click');
+    
+    //get_curr_slider_items().leftItem.unbind('click', move_right);
+    //get_curr_slider_items().rightItem.unbind('click', move_left);
     get_curr_slider_items().leftItem.off('click');
     get_curr_slider_items().rightItem.off('click');
+    
+    get_curr_slider_items().currentItem.attr('is-curr', 'false');
 }
 
 // for caption 
