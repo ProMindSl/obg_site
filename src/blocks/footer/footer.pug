@@ -3,18 +3,21 @@ mixin footer(modifier)
     .container-fluid
       .row
         .col-12
-          .footer__bg-upper-side
+          .footer__bg
+            .footer__bg__upper-side
+            .footer__bg__mid-side
+            .footer__bg__bottom-side
     .container
       .row
         .col-12
           .footer__top.mx-auto
-            nav.footer__sitemap
-              a.footer__link(href="#" data-target="#modal_SiteMap" data-toggle="modal") Карта сайта
-              a.footer__link(href="#" data-target="#modal_AboutSite" data-toggle="modal") Сайт-инфо
-              a.footer__link(href="#" data-target="#modal_AboutCo" data-toggle="modal") Социальные сети
+            nav.footer__menu
+              a.footer__menu__title(href="#" data-target="#modal_SiteMap" data-toggle="modal") Карта сайта
+              a.footer__menu__title(href="#" data-target="#modal_AboutSite" data-toggle="modal") Сайт-инфо
+              a.footer__menu__title(href="#" data-target="#modal_AboutCo" data-toggle="modal") Социальные сети
       .row
         .col-12
-          span.footer__copyright.mx-auto  © 2018 Автономная некоммерческая организация по оказанию услуг в сфере дополнительного образования "ОБРАЗОВАНИЕ БЕЗ ГРАНИЦ" (социально ориентированная)
+          p.footer__copyright.mx-auto  © 2018 Автономная некоммерческая организация по оказанию услуг в сфере дополнительного образования "ОБРАЗОВАНИЕ БЕЗ ГРАНИЦ" (социально ориентированная)
           .footer__btn-box
             p.footer__btn-box__text-line получайте
             p.footer__btn-box__text-line знания

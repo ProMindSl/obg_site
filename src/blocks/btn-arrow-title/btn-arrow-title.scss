@@ -44,7 +44,7 @@
             font-size: 20px;
             height: 37px;
 
-            padding-top: 6px;
+            padding-top: 5px;
             padding-left: 15px;
             padding-right: 15px;
 
@@ -76,8 +76,6 @@
             color: $primary;
             background: $primary_yellow;
         }
-        
-        
         &__arr[name='COLOR_BLUE']
         {
             background-color: $primary_yellow;
@@ -90,7 +88,6 @@
                 }
             }
         }
-
         &__val[name='COLOR_BLUE']
         {   
             color: #fff;
