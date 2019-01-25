@@ -16,6 +16,6 @@ function changeBgSlide(direction)
 	if (currBgSlide > BG_SL_QTY) currBgSlide = 1;
 	if (currBgSlide <= 0) currBgSlide = BG_SL_QTY;
 
-	// показываем новый слайд
+	// показываем новый слайд Изменения
 	TweenMax.to($('#bg_id_'+String(currBgSlide)), 0.5, {opacity:1});
 }
